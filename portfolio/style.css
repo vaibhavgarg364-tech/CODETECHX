@@ -1,0 +1,98 @@
+body{
+font-family:'Poppins',sans-serif;
+margin:0;
+background:linear-gradient(120deg,#0f2027,#203a43,#2c5364);
+color:white;
+}
+
+/* smooth scroll */
+
+html{
+scroll-behavior:smooth;
+}
+
+/* HERO SECTION */
+
+.hero{
+padding:120px 20px;
+text-align:center;
+}
+
+.hero h1{
+font-size:50px;
+font-weight:700;
+color:white;
+}
+
+.hero p{
+font-size:20px;
+color:#e0e0e0;
+}
+
+/* SECTION TITLES */
+
+.section-title{
+font-size:32px;
+margin-top:60px;
+font-weight:600;
+color:white;
+}
+
+/* SKILLS */
+
+.skills{
+padding-bottom:60px;
+}
+
+.skill-card{
+background:white;
+color:#333;
+padding:30px;
+border-radius:10px;
+box-shadow:0 5px 20px rgba(0,0,0,0.2);
+transition:0.3s;
+}
+
+.skill-card:hover{
+transform:translateY(-10px);
+}
+
+/* PROJECT SECTION */
+
+.projects{
+background:#111;
+padding:60px 0;
+color:white;
+}
+
+.project-box{
+background:#222;
+margin:20px auto;
+padding:25px;
+width:300px;
+border-radius:8px;
+transition:0.3s;
+color:white;
+}
+
+.project-box:hover{
+background:#0d6efd;
+}
+
+/* FOOTER */
+
+.footer{
+background:black;
+padding:20px;
+margin-top:40px;
+color:white;
+}
+
+/* BUTTON STYLE */
+
+.btn-primary{
+background:#0d6efd;
+border:none;
+padding:10px 25px;
+font-weight:500;
+}
