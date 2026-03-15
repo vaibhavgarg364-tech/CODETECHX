@@ -1,29 +1,64 @@
-let tasks=[]
+function loadCourse(course){
 
-function addTask(){
+let video=document.getElementById("courseVideo")
 
-let text=document.getElementById("taskInput").value
+if(course==="html"){
+video.src="https://www.youtube.com/embed/qz0aGYrrlhU"
+}
 
-let column=document.getElementById("todo")
+if(course==="python"){
+video.src="https://www.youtube.com/embed/rfscVS0vtbw"
+}
 
-if(text==="") return
+if(course==="ai"){
+video.src="https://www.youtube.com/embed/2ePf9rue1Ao"
+}
 
-let card=document.createElement("div")
-
-card.className="kanban-task"
-
-card.innerText=text
-
-column.appendChild(card)
-
-tasks.push(text)
-
-updateStats()
+updateProgress(40)
 
 }
 
-function updateStats(){
 
-document.getElementById("totalTasks").innerText=tasks.length
+
+function checkAnswer(correct){
+
+let result=document.getElementById("result")
+
+if(correct){
+result.innerHTML="Correct Answer!"
+updateProgress(100)
+}else{
+result.innerHTML="Wrong Answer"
+}
+
+}
+
+
+
+function updateProgress(value){
+
+let bar=document.getElementById("progressBar")
+
+bar.style.width=value+"%"
+bar.innerHTML=value+"%"
+
+localStorage.setItem("progress",value)
+
+}
+
+
+
+window.onload=function(){
+
+let saved=localStorage.getItem("progress")
+
+if(saved){
+
+let bar=document.getElementById("progressBar")
+
+bar.style.width=saved+"%"
+bar.innerHTML=saved+"%"
+
+}
 
 }

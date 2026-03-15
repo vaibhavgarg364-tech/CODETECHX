@@ -3,7 +3,9 @@
 
 <head>
 
-<title>TaskFlow</title>
+<title>LearnHub | Study Platform</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
 <link rel="stylesheet"
 href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
@@ -13,182 +15,209 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
 
 <link rel="stylesheet" href="style.css">
 
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
 
-<div class="sidebar">
 
-<h3>TaskFlow</h3>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 
-<ul>
+<div class="container">
 
-<li><i class="fa fa-home"></i> Dashboard</li>
-<li><i class="fa fa-list"></i> Tasks</li>
-<li><i class="fa fa-columns"></i> Kanban</li>
-<li><i class="fa fa-chart-pie"></i> Analytics</li>
-
-</ul>
+<a class="navbar-brand">LearnHub</a>
 
 </div>
 
+</nav>
 
-<div class="main">
 
-<div class="topbar">
 
-<input
-type="text"
-placeholder="Search tasks">
+<section class="hero">
 
-<div class="user">
+<div class="container">
 
-<i class="fa fa-user"></i>
+<div class="row align-items-center">
+
+<div class="col-md-6">
+
+<h1>Master Programming Faster</h1>
+
+<p>
+Interactive courses, video lessons, quizzes and
+progress tracking in one platform.
+</p>
+
+<a href="#courses" class="btn btn-primary mt-3">
+Start Learning
+</a>
 
 </div>
 
-</div>
+<div class="col-md-6 text-center">
 
-
-<div class="container-fluid mt-4">
-
-<div class="row">
-
-<div class="col-md-4">
-
-<div class="card dashboard-card">
-
-<h5>Total Tasks</h5>
-
-<h2 id="totalTasks">0</h2>
+<img src="images/hero.jpg" class="hero-img">
 
 </div>
 
 </div>
 
-
-<div class="col-md-4">
-
-<div class="card dashboard-card">
-
-<h5>Completed</h5>
-
-<h2 id="completedTasks">0</h2>
-
 </div>
 
-</div>
+</section>
+
+
+
+<section id="courses" class="courses container text-center">
+
+<h2 class="section-title">Courses</h2>
+
+<div class="row g-4 mt-4">
 
 
 <div class="col-md-4">
 
-<div class="card dashboard-card">
+<div class="course-card">
 
-<h5>Pending</h5>
+<img src="https://cdn-icons-png.flaticon.com/512/732/732212.png">
 
-<h2 id="pendingTasks">0</h2>
+<h4>HTML Fundamentals</h4>
 
-</div>
+<p>Learn the basics of building web pages.</p>
 
-</div>
-
-</div>
-
-
-<div class="card task-card mt-4">
-
-<h4>Create Task</h4>
-
-<div class="row">
-
-<div class="col-md-5">
-
-<input
-class="form-control"
-id="taskInput"
-placeholder="Task name">
-
-</div>
-
-<div class="col-md-3">
-
-<input
-type="date"
-class="form-control"
-id="taskDate">
-
-</div>
-
-<div class="col-md-2">
-
-<select
-class="form-control"
-id="priority">
-
-<option>Low</option>
-<option>Medium</option>
-<option>High</option>
-
-</select>
-
-</div>
-
-<div class="col-md-2">
-
-<button
-class="btn btn-primary w-100"
-onclick="addTask()">
-
-Add
-
+<button onclick="loadCourse('html')" class="btn btn-primary">
+Start Learning
 </button>
 
 </div>
 
 </div>
 
-</div>
-
-
-<div class="row mt-4">
-
-<div class="col-md-4">
-
-<div class="kanban-column" id="todo">
-
-<h5>To Do</h5>
-
-</div>
-
-</div>
 
 
 <div class="col-md-4">
 
-<div class="kanban-column" id="progress">
+<div class="course-card">
 
-<h5>In Progress</h5>
+<img src="https://cdn-icons-png.flaticon.com/512/5968/5968350.png">
+
+<h4>Python Basics</h4>
+
+<p>Introduction to Python programming.</p>
+
+<button onclick="loadCourse('python')" class="btn btn-primary">
+Start Learning
+</button>
 
 </div>
 
 </div>
+
 
 
 <div class="col-md-4">
 
-<div class="kanban-column" id="done">
+<div class="course-card">
 
-<h5>Done</h5>
+<img src="https://cdn-icons-png.flaticon.com/512/2103/2103832.png">
 
+<h4>AI Introduction</h4>
+
+<p>Understand the basics of Artificial Intelligence.</p>
+
+<button onclick="loadCourse('ai')" class="btn btn-primary">
+Start Learning
+</button>
+
+</div>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+<section id="videoSection" class="video-section text-center">
+
+<div class="container">
+
+<h2 class="section-title">Course Lesson</h2>
+
+<div class="video-container">
+
+<iframe id="courseVideo"
+width="720"
+height="400"
+src=""
+frameborder="0"
+allowfullscreen></iframe>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<section class="quiz container text-center">
+
+<h2 class="section-title">Quick Quiz</h2>
+
+<div class="quiz-box">
+
+<p id="question">What does HTML stand for?</p>
+
+<button onclick="checkAnswer(true)" class="quiz-btn">
+Hyper Text Markup Language
+</button>
+
+<button onclick="checkAnswer(false)" class="quiz-btn">
+High Tech Machine Learning
+</button>
+
+<button onclick="checkAnswer(false)" class="quiz-btn">
+Hyperlinks Text Model Language
+</button>
+
+<p id="result"></p>
+
+</div>
+
+</section>
+
+
+
+<section class="progress-section text-center">
+
+<div class="container">
+
+<h2 class="section-title">Your Progress</h2>
+
+<div class="progress">
+
+<div id="progressBar" class="progress-bar" style="width:0%">
+0%
 </div>
 
 </div>
 
 </div>
 
-</div>
+</section>
 
-</div>
+
+
+<footer class="footer">
+
+<p>© 2026 LearnHub Learning Platform</p>
+
+</footer>
+
 
 <script src="script.js"></script>
 

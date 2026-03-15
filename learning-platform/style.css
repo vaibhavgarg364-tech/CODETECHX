@@ -1,117 +1,101 @@
 body{
-
-font-family:Arial;
-
+font-family:'Poppins',sans-serif;
+margin:0;
 background:#f1f5f9;
-
 }
 
-.sidebar{
-
-position:fixed;
-
-width:220px;
-
-height:100%;
-
-background:#0f172a;
-
+.hero{
+background:linear-gradient(135deg,#0f172a,#1e293b);
 color:white;
-
-padding:20px;
-
+padding:120px 20px;
 }
 
-.sidebar ul{
-
-list-style:none;
-
-padding:0;
-
+.hero-img{
+width:80%;
+max-width:420px;
 }
 
-.sidebar li{
-
-padding:12px;
-
-margin-top:10px;
-
-background:#1e293b;
-
-border-radius:6px;
-
-cursor:pointer;
-
+.section-title{
+margin-top:60px;
+font-weight:600;
 }
 
-.main{
-
-margin-left:240px;
-
-padding:20px;
-
-}
-
-.topbar{
-
-display:flex;
-
-justify-content:space-between;
-
+.course-card{
 background:white;
-
-padding:10px;
-
-border-radius:8px;
-
-box-shadow:0 2px 6px rgba(0,0,0,0.1);
-
+padding:30px;
+border-radius:16px;
+box-shadow:0 15px 40px rgba(0,0,0,0.12);
+transition:.3s;
+height:100%;
 }
 
-.dashboard-card{
-
-padding:20px;
-
-border-radius:10px;
-
-box-shadow:0 3px 10px rgba(0,0,0,0.1);
-
+.course-card:hover{
+transform:translateY(-10px);
+box-shadow:0 25px 60px rgba(0,0,0,0.18);
 }
 
-.task-card{
-
-padding:20px;
-
-border-radius:10px;
-
-box-shadow:0 3px 10px rgba(0,0,0,0.1);
-
+.course-card img{
+width:80px;
+margin-bottom:15px;
 }
 
-.kanban-column{
+.course-card p{
+color:#64748b;
+}
 
+.video-section{
+padding:80px 0;
 background:#e2e8f0;
-
-min-height:250px;
-
-padding:10px;
-
-border-radius:10px;
-
 }
 
-.kanban-task{
-
+.quiz-box{
 background:white;
+padding:30px;
+border-radius:12px;
+box-shadow:0 10px 30px rgba(0,0,0,0.1);
+max-width:500px;
+margin:auto;
+}
 
-padding:10px;
+.quiz-btn{
+display:block;
+width:100%;
+margin:10px 0;
+padding:12px;
+border:none;
+background:#6366f1;
+color:white;
+border-radius:8px;
+font-weight:500;
+transition:.3s;
+}
 
-margin-top:10px;
+.quiz-btn:hover{
+background:#4f46e5;
+transform:scale(1.02);
+}
 
-border-radius:6px;
+.progress-section{
+padding:80px 0;
+}
 
-box-shadow:0 2px 6px rgba(0,0,0,0.1);
+.progress{
+height:30px;
+max-width:500px;
+margin:auto;
+border-radius:20px;
+overflow:hidden;
+}
 
-cursor:grab;
+.progress-bar{
+background:linear-gradient(90deg,#6366f1,#06b6d4);
+font-weight:600;
+}
 
+.footer{
+text-align:center;
+padding:25px;
+background:#111;
+color:white;
+margin-top:60px;
 }
